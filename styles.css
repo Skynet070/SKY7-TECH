@@ -153,81 +153,62 @@ footer {
     margin: auto; /* Center content */
 }
 
-.info-section {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+.post-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; /* Center the container */
+    padding: 20px;
+    overflow: hidden; /* Hide overflow for smooth scrolling */
 }
 
-.info-box {
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.post {
+    background-color: #f9f9f9; /* Light background for posts */
+    border: 1px solid #ccc; /* Border for each post */
+    border-radius: 5px; /* Rounded corners */
     padding: 15px;
-    margin: 10px;
-    flex: 1;
-    min-width: 250px; /* Minimum width for boxes */
-    max-width: 30%; /* Limit the maximum width for larger screens */
+    margin: 15px 0; /* Margin between posts */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly lower */
 }
 
-.info-box h3 {
+.post:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    transform: translateY(-5px); /* Slightly raise on hover */
+}
+
+.post h2 {
     color: #003366; /* Dark blue heading */
     margin-top: 0; /* Remove top margin */
 }
 
-.info-box ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0; /* Remove padding */
+.post p {
+    color: #333; /* Dark text for paragraphs */
 }
 
-.info-box ul li {
-    margin: 5px 0; /* Add margin to list items */
+/* Animation for scrolling */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
 }
 
-.info-box ul li a {
-    text-decoration: none;
-    color: #003366; /* Link color */
+.post-container .post {
+    animation: fadeIn 0.6s forwards; /* Trigger fade-in animation */
 }
 
-.info-box ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
+.post-container .post:nth-child(1) {
+    animation-delay: 0.1s; /* Delay for the first post */
 }
-
-.current-posts {
-    margin-top: 30px;
-    text-align: left;
+.post-container .post:nth-child(2) {
+    animation-delay: 0.2s; /* Delay for the second post */
 }
-
-.current-posts h2 {
-    color: #003366; /* Dark blue heading */
+.post-container .post:nth-child(3) {
+    animation-delay: 0.3s; /* Delay for the third post */
 }
-
-.current-posts ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0; /* Remove padding */
-}
-
-.current-posts ul li {
-    margin: 10px 0; /* Add margin to list items */
-    padding: 10px;
-    border: 1px solid #ccc; /* Border for each post */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background for posts */
-    opacity: 0; /* Start with hidden opacity */
-    transform: translateY(20px); /* Start slightly lower */
-    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease; /* Transition for visibility */
-}
-
-.current-posts ul li.visible {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move to original position */
-}
-
-.current-posts ul li:hover {
-    background-color: #e0f7fa; /* Light blue background on hover */
-    transform: scale(1.05); /* Slightly enlarge the post on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+.post-container .post:nth-child(4) {
+    animation-delay: 0.4s; /* Delay for the fourth post */
 }
 
 .content {
@@ -244,23 +225,6 @@ footer {
         margin: 5px 0; /* Add margin for spacing */
         text-align: center; /* Center text */
     }
-
-    .info-section {
-        flex-direction: column; /* Stack info boxes vertically */
-        align-items: center; /* Center align items */
-    }
-
-    .info-box {
-        max-width: 90%; /* Maximum width for smaller screens */
-    }
-
-    .current-posts ul li {
-        margin: 10px 0; /* Add margin to list items */
-        opacity: 1; /* Ensure posts are visible */
-        transform: translateY(0); /* Reset initial transform */
-    }
-}
-
 .container {
     padding: 20px;
     max-width: 1200px; /* Max width for larger screens */
