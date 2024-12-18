@@ -49,3 +49,29 @@ let currentSlideIndex = 0;
 
     window.addEventListener('scroll', checkVisibility);
     window.addEventListener('load', checkVisibility); // Check on load as well
+
+// Get the video advert element
+const videoAdvert = document.getElementById('video-advert');
+
+// Add event listener to play video when visible
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    videoAdvert.play();
+  } else {
+    videoAdvert.pause();
+  }
+});
+
+// Add event listener to pause video when user interacts with page
+document.addEventListener('click', () => {
+  videoAdvert.pause();
+});
+
+document.addEventListener('scroll', () => {
+  videoAdvert.pause();
+});
+
+document.addEventListener('keydown', () => {
+  videoAdvert.pause();
+});
+
