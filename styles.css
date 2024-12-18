@@ -240,8 +240,8 @@ footer {
 
 /* Video advert styles */
 #video-advert {
-  width: 30px;
-  height: 20px;
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
