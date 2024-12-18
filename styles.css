@@ -230,3 +230,18 @@ footer {
     max-width: 1200px; /* Max width for larger screens */
     margin: auto; /* Center content */
 }
+    /* Video advert container styles */
+.video-advert-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Video advert styles */
+#video-advert {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
