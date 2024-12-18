@@ -1,0 +1,178 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ffffff; /* White background */
+            color: #003366; /* Dark blue text */
+        }
+        header {
+            background: #003366; /* Initial dark blue header */
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            position: sticky; /* Make the header sticky */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure it stays above other content */
+            transition: background 0.5s ease; /* Smooth transition for background color */
+            justify-content: space-between; /* Spread items in header */
+        }
+        .logo {
+            max-width: 150px; /* Adjust logo size */
+        }
+        h1 {
+            margin: 0 20px; /* Add margin to spread the site name */
+            flex-grow: 1; /* Allow the site name to take available space */
+            text-align: center; /* Center the site name */
+        }
+        nav {
+            display: flex; /* Use flexbox for navigation links */
+            align-items: center; /* Center links vertically */
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .search-container {
+            margin-left: 20px; /* Space between nav and search */
+        }
+        .search-container input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 500px; /* Fixed height for the slider */
+        }
+        .slide {
+            min-width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .slider img {
+            width: 100%;
+            height: 100%; /* Ensure image covers the slider */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+        .active {
+            opacity: 1;
+        }
+        .slide-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .dots {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .active-dot {
+            background-color: #003366; /* Dark blue for active dot */
+        }
+        .sections {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background: #003366; /* Dark blue footer */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .responsive {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+        .info-box {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            flex: 1;
+            min-width: 250px; /* Minimum width for boxes */
+            max-width: 30%; /* Limit the maximum width for larger screens */
+        }
+        .info-box h3 {
+            color: #003366; /* Dark blue heading */
+            margin-top: 0; /* Remove top margin */
+        }
+        .info-box ul {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0; /* Remove padding */
+        }
+        .info-box ul li {
+            margin: 5px 0; /* Add margin to list items */
+        }
+        .info-box ul li a {
+            text-decoration: none;
+            color: #003366; /* Link color */
+        }
+        .info-box ul li a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        .current-posts {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .current-posts h2 {
+            color: #003366; /* Dark blue heading */
+        }
+        .current-posts ul {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0; /* Remove padding */
+        }
+        .current-posts ul li {
+            margin: 10px 0; /* Add margin to list items */
+            padding: 10px;
+            border: 1px solid #ccc; /* Border for each post */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #f9f9f9; /* Light background for posts */
+            opacity: 0; /* Start with hidden opacity */
+            transform: translateY(20px); /* Start slightly lower */
+            transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease; /* Transition for visibility */
+        }
+        .current-posts ul li.visible {
+            opacity: 1; /* Fade in */
+            transform: translateY(0); /* Move to original position */
+        }
+        .current-posts ul li:hover {
+            background-color: #e0f7fa; /* Light blue background on hover */
+            transform: scale(1.05); /* Slightly enlarge the post on hover */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+        }
+        .content{
+            text-align: left;
+        }
