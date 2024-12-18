@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SKY7 TECH</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header>
+    <img src="../images/d4517bb9-e773-47d6-96b5-b0f6120fc97b-removebg-preview.png" alt="SKY7 TECH Logo" class="logo">
+    <h1>SKY7 TECH</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="content">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you! Please reach out with any questions or comments.</p>
+    
+    <h3>Email</h3>
+    <p><a href="mailto:info@sky7tech.com">info@sky7tech.com</a></p>
+
+    <h3>Phone</h3>
+    <p>(123) 456-7890</p>
+    
+    <h3>Address</h3>
+    <p>123 Tech Lane, City, Country</p>
+
+    <h3>Contact Form</h3>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Send Message">
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 SKY7 TECH. All rights reserved.</p>
+</footer>
+<script>
+    // Multicolor background effect
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A8'];
+    let currentColorIndex = 0;
+
+    function changeBackgroundColor() {
+        document.body.style.backgroundColor = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+    }
+
+    setInterval(changeBackgroundColor, 3000); // Change color every 3 seconds
+</script>
+
+</body>
+</html>
