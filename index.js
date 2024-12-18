@@ -24,6 +24,16 @@ let currentSlideIndex = 0;
     setInterval(nextSlide, 3000); // Change slide every 3 seconds
     showSlide(currentSlideIndex); // Initialize the first slide
 
+// Optional: Adjust the animation duration based on content length
+    const ticker = document.querySelector('.ticker');
+    const tickerWidth = ticker.offsetWidth;
+    const containerWidth = document.querySelector('.ticker-container').offsetWidth;
+
+    if (tickerWidth > containerWidth) {
+        const duration = (tickerWidth / 100) * 10; // Adjust speed here
+        ticker.style.animationDuration = `${duration}s`;
+    }
+
     // Multicolor header change
     const colors = ['#003366', '#006699', '#0099cc', '#00ccff', '#66ccff'];
     let colorIndex = 0;
