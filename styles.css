@@ -207,3 +207,8 @@ body {
         width: 100%; /* Full width for links */
     }
 }
+.container {
+    padding: 20px;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto; /* Center content */
+}
