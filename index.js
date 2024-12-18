@@ -63,6 +63,48 @@ let currentSlideIndex = 0;
             if (isElementInViewport(item)) {
                 item.classList.add('visible');
             }
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('nav');
+
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+});
+
+            let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+    });
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active-dot', i === index);
+    });
+}
+
+function currentSlide(index) {
+    currentSlideIndex = index;
+    showSlide(currentSlideIndex);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    showSlide(currentSlideIndex);
+});
+
+            const links = document.querySelectorAll('nav a');
+
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    });
+});
         });
     }
 
