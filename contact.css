@@ -52,3 +52,12 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    nav a {
+        width: 100%; /* Full width for links */
+    }
+}
