@@ -142,72 +142,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-.post-container {
-    width: 100%;
-    padding: 20px;
-    overflow: hidden; /* Hide overflow for smooth scrolling */
-}
-
-.post {
-    background-color: #f9f9f9; /* Light background for posts */
-    border: 1px solid #ccc; /* Border for each post */
-    border-radius: 5px; /* Rounded corners */
-    padding: 15px;
-    margin: 15px 0; /* Margin between posts */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly lower */
-}
-
-.post:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-    transform: translateY(-5px); /* Slightly raise on hover */
-}
-
-.post h2 {
-    color: #003366; /* Dark blue heading */
-    margin-top: 0; /* Remove top margin */
-}
-
-.post p {
-    color: #333; /* Dark text for paragraphs */
-}
-
-/* Animation for scrolling */
-@keyframes fadeIn {
-    to {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Original position */
-    }
-}
-
-.post-container .post {
-    animation: fadeIn 0.6s forwards; /* Trigger fade-in animation */
-}
-
-.post-container .post:nth-child(1) {
-    animation-delay: 0.1s; /* Delay for the first post */
-}
-.post-container .post:nth-child(2) {
-    animation-delay: 0.2s; /* Delay for the second post */
-}
-.post-container .post:nth-child(3) {
-    animation-delay: 0.3s; /* Delay for the third post */
-}
-.post-container .post:nth-child(4) {
-    animation-delay: 0.4s; /* Delay for the fourth post */
-}
-
-.content {
-    text-align: left;
-}
-
 .ticker-container {
     overflow: hidden; /* Hide overflow */
     white-space: nowrap; /* Prevent line breaks */
-    background: #003366; /* Background color for the ticker */
-    color: white; /* Text color */
     padding: 10px 0; /* Padding for the ticker */
     position: relative; /* Position for the animation */
 }
@@ -221,6 +158,7 @@ footer {
     display: inline-block; /* Inline block for each item */
     margin-right: 50px; /* Space between items */
     font-size: 18px; /* Font size for the ticker text */
+    color: red; /* Set text color to red */
 }
 
 @keyframes scroll {
