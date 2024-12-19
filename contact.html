@@ -4,7 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - SKY7 TECH</title>
-    <link rel="stylesheet" href="contact.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White background */
+        }
+
+        header {
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px; /* Padding for header */
+            position: sticky; /* Make the header sticky */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure it stays above other content */
+            background-color: #003366; /* Dark blue header */
+            justify-content: space-between; /* Spread out items in header */
+        }
+
+        .logo {
+            max-width: 150px; /* Adjust logo size */
+        }
+
+        h1 {
+            margin: 0; /* Remove margin for better centering */
+            flex-grow: 1; /* Allow the site name to take available space */
+            text-align: center; /* Center the site name */
+        }
+
+        nav {
+            display: flex; /* Use flexbox for navigation links */
+            align-items: center; /* Center links vertically */
+            flex-grow: 1; /* Allow nav to take available space */
+            justify-content: flex-end; /* Align nav items to the end */
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px; /* Space between navigation links */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .content {
+            display: grid; /* Use CSS Grid */
+            grid-template-columns: 1fr; /* One column layout */
+            gap: 20px; /* Space between grid items */
+            padding: 20px; /* Padding around the content */
+            max-width: 800px; /* Max width for content */
+            margin: auto; /* Center the content */
+        }
+
+        h2, h3 {
+            color: #003366; /* Dark blue headings */
+        }
+
+        form {
+            display: grid; /* Use Grid for form layout */
+            gap: 10px; /* Space between form elements */
+        }
+
+        label {
+            font-weight: bold; /* Bold labels */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%; /* Full width inputs */
+            padding: 10px; /* Padding for inputs */
+            border: 1px solid #ccc; /* Border for inputs */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        input[type="submit"] {
+            background-color: #28a745; /* Green submit button */
+            color: white; /* White text for button */
+            border: none; /* No border */
+            padding: 10px; /* Padding for button */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #003366; /* Dark blue footer */
+            color: white; /* White text for footer */
+        }
+    </style>
 </head>
 <body>
 
@@ -33,7 +126,7 @@
     <p>123 Seaways Building, Port Harcourt, Rivers State, Nigeria</p>
 
     <h3>Contact Form</h3>
-    <form>
+    <form action="mailto:skynetwills@gmail.com" method="post" enctype="text/plain">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         
@@ -43,13 +136,14 @@
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
         
-        <input type="submit" value="Send Message" mailto:skynetwills@gmail.com>
+        <input type="submit" value="Send Message">
     </form>
 </div>
 
 <footer>
     <p>&copy; 2024 SKY7 TECH. All rights reserved.</p>
 </footer>
+
 <script>
     // Multicolor background effect
     const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A8'];
