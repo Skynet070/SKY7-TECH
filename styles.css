@@ -47,6 +47,7 @@ nav {
 nav a {
     color: white;
     margin: 0 15px; /* Space between navigation links */
+    text-decoration: none; /* removes underline from navigation */
 }
 
 .search-container {
