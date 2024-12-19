@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - SKY7 TECH</title>
-    <link rel="stylesheet" href="service.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -70,25 +69,17 @@
             background-color: #f9f9f9; /* Light background for cards */
         }
 
+        .card img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 4px; /* Optional: rounded corners for images */
+        }
+
         footer {
             text-align: center;
             padding: 10px 0;
             background-color: #003366; /* Dark blue footer */
             color: white; /* White text for footer */
-        }
-
-        /* Script for background color change */
-        script {
-            // Multicolor background effect
-            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A8'];
-            let currentColorIndex = 0;
-
-            function changeBackgroundColor() {
-                document.body.style.backgroundColor = colors[currentColorIndex];
-                currentColorIndex = (currentColorIndex + 1) % colors.length;
-            }
-
-            setInterval(changeBackgroundColor, 3000); // Change color every 3 seconds
         }
     </style>
 </head>
