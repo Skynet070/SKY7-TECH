@@ -230,15 +230,3 @@ footer {
     max-width: 1200px; /* Max width for larger screens */
     margin: auto; /* Center content */
 }
-
-    .video-advert-container {
-            position: fixed; /* Fixed position to float above content */
-            bottom: 20px; /* Distance from the bottom */
-            right: 20px; /* Distance from the right */
-            width: 300px; /* Set desired width */
-            z-index: 1000; /* Higher z-index to stay above all content */
-        }
-        video {
-            width: 100%; /* Responsive width */
-            height: auto; /* Maintain aspect ratio */
-        }
