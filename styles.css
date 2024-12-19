@@ -202,3 +202,28 @@ footer {
 .content {
     text-align: left;
 }
+
+.ticker-container {
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent line breaks */
+    background: #003366; /* Background color for the ticker */
+    color: white; /* Text color */
+    padding: 10px 0; /* Padding for the ticker */
+    position: relative; /* Position for the animation */
+}
+
+.ticker {
+    display: inline-block; /* Inline block for continuous scrolling */
+    animation: scroll 10s linear infinite; /* Animation for scrolling */
+}
+
+.ticker-item {
+    display: inline-block; /* Inline block for each item */
+    margin-right: 50px; /* Space between items */
+    font-size: 18px; /* Font size for the ticker text */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); } /* Start from right */
+    100% { transform: translateX(-100%); } /* Move to left */
+}
