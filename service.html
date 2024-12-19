@@ -5,6 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - SKY7 TECH</title>
     <link rel="stylesheet" href="service.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White background */
+        }
+
+        header {
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px; /* Padding for header */
+            position: sticky; /* Make the header sticky */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure it stays above other content */
+            animation: colorChange 10s infinite; /* Animation for background color change */
+            justify-content: space-between; /* Spread out items in header */
+        }
+
+        @keyframes colorChange {
+            0% { background: #003366; } /* Dark blue */
+            25% { background: #ff5733; } /* Red */
+            50% { background: #33c1ff; } /* Light blue */
+            75% { background: #28a745; } /* Green */
+            100% { background: #003366; } /* Back to dark blue */
+        }
+
+        .logo {
+            max-width: 150px; /* Adjust logo size */
+        }
+
+        h1 {
+            margin: 0; /* Remove margin for better centering */
+            flex-grow: 1; /* Allow the site name to take available space */
+            text-align: center; /* Center the site name */
+        }
+
+        nav {
+            display: flex; /* Use flexbox for navigation links */
+            align-items: center; /* Center links vertically */
+            flex-grow: 1; /* Allow nav to take available space */
+            justify-content: flex-end; /* Align nav items to the end */
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px; /* Space between navigation links */
+            text-decoration: none;
+        }
+
+        .container {
+            display: grid; /* Use CSS Grid */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Space between grid items */
+            padding: 20px; /* Padding around the grid */
+        }
+
+        .card {
+            border: 1px solid #ccc; /* Border for each card */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Padding inside cards */
+            background-color: #f9f9f9; /* Light background for cards */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #003366; /* Dark blue footer */
+            color: white; /* White text for footer */
+        }
+
+        /* Script for background color change */
+        script {
+            // Multicolor background effect
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A8'];
+            let currentColorIndex = 0;
+
+            function changeBackgroundColor() {
+                document.body.style.backgroundColor = colors[currentColorIndex];
+                currentColorIndex = (currentColorIndex + 1) % colors.length;
+            }
+
+            setInterval(changeBackgroundColor, 3000); // Change color every 3 seconds
+        }
+    </style>
 </head>
 <body>
 
@@ -18,11 +104,8 @@
         <a href="contact.html">Contact</a>
     </nav>
 </header>
-<p>
-    <br>
-    <p>
 
-    <div class="container">
+<div class="container">
     <div class="card">
         <h2>DIGITAL MARKETING</h2>
         <img src="istockphoto-1648044864-612x612.jpg" alt="DIGITAL MARKETING">
@@ -57,9 +140,11 @@
         <p>Partner with us to unlock the full potential of your IT infrastructure and drive sustainable growth.</p>
     </div>
 </div>
+
 <footer>
     <p>&copy; 2024 SKY7 TECH. All rights reserved.</p>
 </footer>
+
 <script>
     // Multicolor background effect
     const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A8'];
