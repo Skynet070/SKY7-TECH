@@ -11,11 +11,12 @@ header {
     color: white;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Padding for header */
     position: sticky; /* Make the header sticky */
     top: 0; /* Stick to the top */
     z-index: 1000; /* Ensure it stays above other content */
     animation: colorChange 10s infinite; /* Animation for background color change */
+    justify-content: space-between; /* Spread out items in header */
 }
 
 @keyframes colorChange {
@@ -31,7 +32,7 @@ header {
 }
 
 h1 {
-    margin: 0 20px; /* Add margin to spread the site name */
+    margin: 0; /* Remove margin for better centering */
     flex-grow: 1; /* Allow the site name to take available space */
     text-align: center; /* Center the site name */
 }
@@ -39,15 +40,14 @@ h1 {
 nav {
     display: flex; /* Use flexbox for navigation links */
     align-items: center; /* Center links vertically */
+    flex-grow: 1; /* Allow nav to take available space */
+    justify-content: flex-end; /* Align nav items to the end */
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
-    text-decoration: none;
+    margin: 0 15px; /* Space between navigation links */
 }
-
-/* ... (other styles remain unchanged) ... */
 
 .search-container {
     margin-left: 20px; /* Space between nav and search */
@@ -58,7 +58,6 @@ nav a {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
 .slider {
     position: relative;
     overflow: hidden;
