@@ -167,8 +167,9 @@ footer {
 }
  video {
             width: 200px; /* Set the desired video width */
-            height: auto; /* Maintain aspect ratio */
+            height: 150px; /* Set a fixed height for uniformity */
             margin: 0 10px; /* Spacing between videos */
+            cursor: pointer; /* Change cursor to pointer */
         }
         @keyframes scroll {
             from {
