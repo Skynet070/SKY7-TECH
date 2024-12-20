@@ -61,3 +61,10 @@ footer {
         h2 {
             color: #333;
         }
+ @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .container {
+                flex-direction: column; /* Stacks cards vertically on smaller screens */
+            }
