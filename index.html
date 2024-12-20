@@ -83,5 +83,40 @@
     <p>&copy; 2024 SKY7 TECH. All rights reserved.</p>
 </footer>
 <script src="index.js"></script>
+     <script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slides = document.getElementById('slides');
+        const totalSlides = slides.children.length;
+        currentIndex = (index + totalSlides) % totalSlides; // Wrap around
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+
+    function updateDots() {
+        const dots = document.getElementById('dots');
+        dots.innerHTML = '';
+        const totalSlides = document.getElementsByClassName('slide').length;
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            dot.onclick = () => showSlide(i);
+            if (i === currentIndex) {
+                dot.classList.add('active');
+            }
+            dots.appendChild(dot);
+        }
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+        showSlide(currentIndex + 1);
+    }, 5000);
+
+    // Initialize the slider
+    showSlide(currentIndex);
+</script>
 </body>
 </html>
