@@ -160,6 +160,9 @@ footer {
     font-size: 18px; /* Font size for the ticker text */
     color: red; /* Set text color to red */
 }
+.ticker:hover {
+    animation-play-state: paused; /* Pause the animation on hover */
+}
 
 @keyframes scroll {
     0% { transform: translateX(100%); } /* Start from right */
