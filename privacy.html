@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - SKY7 TECH</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: grid; /* Use CSS Grid */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Space between grid items */
+            padding: 20px; /* Padding around the grid */
+        }
+
+        .card {
+            border: 1px solid #ccc; /* Border for each card */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Padding inside cards */
+            background-color: #f9f9f9; /* Light background for cards */
+        }
+
+        .card img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 4px; /* Optional: rounded corners for images */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #003366; /* Dark blue footer */
+            color: white; /* White text for footer */
+        }
+         @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .container {
+                flex-direction: column; /* Stacks cards vertically on smaller screens */
+            }
+    </style>
 </head>
 <body>
 
@@ -20,7 +55,8 @@
     </nav>
 </header>
 
-<div class="sections responsive">
+<div class="container">
+    <div class="card">
     <h2>Privacy Policy</h2>
     <p>Last updated: [Date]</p>
     
@@ -53,6 +89,7 @@
     <h3>Contact Us</h3>
     <p>If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at:</p>
     <p>Email: info@sky7tech.com<br>Phone: (123) 456-7890</p>
+</div>
 </div>
 
 <footer>
