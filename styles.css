@@ -165,6 +165,19 @@ footer {
     0% { transform: translateX(100%); } /* Start from right */
     100% { transform: translateX(-100%); } /* Move to left */
 }
+ video {
+            width: 200px; /* Set the desired video width */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 10px; /* Spacing between videos */
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
 .container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
