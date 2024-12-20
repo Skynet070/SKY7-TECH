@@ -207,3 +207,10 @@ transition: transform 0.3s; /* Transition for hover effect */
         h2 {
             color: #333;
         }
+ @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .container {
+                flex-direction: column; /* Stacks cards vertically on smaller screens */
+            }
