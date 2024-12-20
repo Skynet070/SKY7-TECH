@@ -75,20 +75,3 @@ document.addEventListener('keydown', () => {
   videoAdvert.pause();
 });
 
-    const ticker = document.getElementById('ticker');
-    
-    // Pause animation on hover
-    ticker.addEventListener('mouseenter', () => {
-        ticker.querySelector('.ticker').style.animationPlayState = 'paused';
-    });
-
-    // Resume animation when mouse leaves
-    ticker.addEventListener('mouseleave', () => {
-        ticker.querySelector('.ticker').style.animationPlayState = 'running';
-    });
-
-    // Function to open video in a new tab
-    function openVideo(videoSrc) {
-        window.open(videoSrc, '_blank');
-    }
-
