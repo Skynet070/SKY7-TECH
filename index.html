@@ -10,8 +10,8 @@
     <style>
         .slider {
             position: relative;
-            max-width: 800px;
-            width: 100%;
+            max-width: 100%; /* Full width */
+            width: 100vw; /* Full viewport width */
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -21,12 +21,13 @@
             transition: transform 0.5s ease-in-out;
         }
         .slide {
-            min-width: 100%;
+            min-width: 100vw; /* Ensure each slide takes full viewport width */
             box-sizing: border-box;
             position: relative;
         }
         img {
-            width: 100%;
+            width: 100vw; /* Full viewport width */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 10px;
         }
         .slide-text {
@@ -37,8 +38,7 @@
             color: #fff;
             font-size: 24px;
             text-align: center;
-            /* Remove background color */
-            background: none; 
+            background: none; /* No background color */
         }
         .dots {
             text-align: center;
