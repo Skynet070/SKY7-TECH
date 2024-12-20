@@ -50,62 +50,6 @@ nav a {
     text-decoration: none; /* removes underline from navigation */
 }
 
-.search-container {
-    margin-left: 20px; /* Space between nav and search */
-}
-
-.search-container input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
- .slider {
-            position: relative;
-            max-width: 800px;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            position: relative;
-        }
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .slide-text {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            color: #fff;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .dots {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .dot {
-            display: inline-block;
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .dot.active {
-            background-color: #717171;
-        }
-
 .sections {
     padding: 20px;
     text-align: center;
