@@ -153,6 +153,9 @@ footer {
     display: inline-block; /* Inline block for continuous scrolling */
     animation: scroll 10s linear infinite; /* Animation for scrolling */
 }
+.ticker:hover {
+    animation-play-state: paused; /* Pause the animation on hover */
+}
 
 .ticker-item {
     display: inline-block; /* Inline block for each item */
@@ -160,9 +163,7 @@ footer {
     font-size: 18px; /* Font size for the ticker text */
     color: red; /* Set text color to red */
 }
-.ticker:hover {
-    animation-play-state: paused; /* Pause the animation on hover */
-}
+
 
 @keyframes scroll {
     0% { transform: translateX(100%); } /* Start from right */
@@ -173,6 +174,11 @@ footer {
             height: 150px; /* Set a fixed height for uniformity */
             margin: 0 10px; /* Spacing between videos */
             cursor: pointer; /* Change cursor to pointer */
+        }
+transition: transform 0.3s; /* Transition for hover effect */
+        }
+        video:hover {
+            transform: scale(1.05); /* Scale effect on hover */
         }
         @keyframes scroll {
             from {
